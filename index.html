@@ -1023,7 +1023,48 @@
 </div>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Map_of_Calradia_1084.png/2560px-Map_of_Calradia_1084.png" id="worldmap" class="world-map">
     
-    
+<script>
+
+data = ['World Map', 'City/Villages', 'Heros', 'Troop Trees', 'Guides'];
+        
+list = document.getElementById("header");
+
+data.forEach((item) => {
+    let Button = document.createElement("Button");
+    Button.innerText = item;
+    Button.className = "btn-slice"
+    Button.id = item
+    Button.onclick = function () { test(item) }
+    list.appendChild(Button);
+})
+
+function test(item) {
+        var x1 = document.getElementById("worldmap");
+        var x2 = document.getElementById("trooptree");
+    if (item == "World Map") {
+        if (x1.style.display === "none") {
+            x1.style.display = "block";
+            x2.style.display = "none";
+        } else {
+            x1.style.display = "none";
+        }
+    } else if (item == "City/Villages") { 
+        console.log("2") 
+    } else if (item == "Heros") { 
+        console.log("3") 
+    } else if (item == "Troop Trees") {
+        if (x2.style.display === "none") {
+            x2.style.display = "block";
+            x1.style.display = "none";
+        } else {
+            x2.style.display = "none";
+        } 
+        console.log("4") 
+    } else if (item == "Guides") { 
+        console.log("5") 
+    }
+}
+</script>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="script.js">
     </script>
