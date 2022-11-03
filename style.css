@@ -1,0 +1,113 @@
+.body {
+    background: url(https://images.cgames.de/images/gamestar/4/mount-blade-2-bannerlord-plus_6122303.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.center {
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+
+}
+
+
+
+/* Remove default bullets */
+ul,
+#myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: rgb(6, 23, 99);
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+    user-select: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+ul.child::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #666;
+    top: -9px;
+    bottom: 10px;
+    left: -14px;
+}
+
+/*--Button Styles--*/
+.btn-slice {
+    padding: 1.2rem 2.5rem;
+    border: 2px solid #c2bcbc;
+    border-radius: 0rem;
+    color: #030303;
+    background-color: #fdfaf9a1;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    position: relative;
+    
+    -webkit-transition: all 1000ms cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
+    -webkit-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    -moz-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    -o-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
+  
+    -webkit-transition-timing-function: cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    -moz-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    -o-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+    transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
+  }
+
+  .btn-slice:hover{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .btn-slice:hover:before{
+    width: 130%;
+  }
+  .world-map { 
+    display: none;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
